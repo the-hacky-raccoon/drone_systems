@@ -1,0 +1,10 @@
+include:
+  - remote: 'https://gitlab.com/the_hacky_raccoon/ci/raw/main/templates/.base_workflow.yml'
+
+variables:
+  CI_RUNNER_TAG: hacky-raccoon-docker-amd64
+  DOCKER_IMAGE_ARCH: amd64              # Docker image architecture
+  DOCKERFILES_DIR: .gci                 # Dockerfile directory
+
+stages:
+  - build_image

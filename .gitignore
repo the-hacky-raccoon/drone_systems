@@ -1,0 +1,6 @@
+sphinx/public
+sphinx/_build
+sphinx/img/*bkp
+*.swp
+*.swo
+*.drawio.dtmp
