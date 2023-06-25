@@ -1,5 +1,6 @@
 include:
   - remote: 'https://gitlab.com/the_hacky_raccoon/ci/raw/main/templates/.base_workflow.yml'
+  - remote: 'https://gitlab.com/the_hacky_raccoon/ci/raw/main/templates/.base_build_docker_img.yml'
 
 variables:
   CI_RUNNER_TAG: hacky-raccoon-docker-amd64
@@ -8,3 +9,24 @@ variables:
 
 stages:
   - build_image
+
+build-image-branch:
+  extends: 
+    - .build-image
+    - .branch
+  variables:
+    IMAGE: ${CI_REGISTRY_IMAGE}/${DOCKER_IMAGE_ARCH}/${CI_COMMIT_REF_NAME}:${CI_COMMIT_SHORT_SHA}
+
+build-image-latest:
+  extends: 
+    - .build-image
+    - .latest
+  variables:
+    IMAGE: ${CI_REGISTRY_IMAGE}/${DOCKER_IMAGE_ARCH}:latest
+
+build-image-tag:
+  extends: 
+    - .build-image
+    - .tag
+  variables:
+    IMAGE: ${CI_REGISTRY_IMAGE}/${DOCKER_IMAGE_ARCH}/tag:${CI_COMMIT_REF_NAME}
