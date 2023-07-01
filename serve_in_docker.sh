@@ -48,4 +48,5 @@ else
 	log "yeah! ${DOCKER_IMAGE_EXECUTED_LOCALLY} exists!!"
 fi
 
-docker run --rm -it --net=host -v $(pwd):/docs ${DOCKER_IMAGE_EXECUTED_LOCALLY} /bin/bash
+docker run --rm -it --net=host -v $(pwd):/docs ${DOCKER_IMAGE_EXECUTED_LOCALLY} \
+	sh -c "sphinx-build -d _build/doctrees . _build/html && sphinx-serve"

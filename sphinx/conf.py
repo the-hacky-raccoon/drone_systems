@@ -32,6 +32,7 @@ release = 'https://gitlab.com/the_hacky_raccoon/raccon_drone/documentation'
 # ones.
 extensions = [
     'sphinx_rtd_theme',
+    'sphinx.ext.graphviz'
 ]
 
 # Add any paths that contain templates here, relative to this directory.

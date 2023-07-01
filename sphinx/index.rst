@@ -8,6 +8,10 @@ Raccon drone is a drone platform based in PC/104 specification (the one used in 
     :maxdepth: 2
     :caption: Contents:
 
+    chapters/system_overview
+    chapters/fcu/intro
+    chapters/eps/intro
+    chapters/cs/intro
 
 Indices and tables
 ==================
