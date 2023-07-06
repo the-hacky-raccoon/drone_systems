@@ -3,7 +3,7 @@ include:
   - remote: 'https://gitlab.com/the_hacky_raccoon/ci/raw/main/templates/.base_build_docker_img.yml'
 
 variables:
-  CI_RUNNER_TAG: hacky-raccoon-docker-amd64 
+  BUILD_IMAGE_RUNNER_TAG: hacky-raccoon-docker-amd64
   DOCKER_IMAGE_ARCH: amd64              # Docker image architecture
   DOCKERFILES_DIR: .gci                 # Dockerfile directory
 
@@ -40,6 +40,8 @@ build-image-tag:
   artifacts:
     paths:
     - public
+  tags:
+    - hacky-raccoon-docker-amd64
 
 pages-branch:
   image: ${CI_REGISTRY_IMAGE}/${DOCKER_IMAGE_ARCH}/${CI_COMMIT_REF_NAME}:${CI_COMMIT_SHORT_SHA}
