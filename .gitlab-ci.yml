@@ -3,12 +3,13 @@ include:
   - remote: 'https://gitlab.com/the_hacky_raccoon/ci/raw/main/templates/.base_build_docker_img.yml'
 
 variables:
-  CI_RUNNER_TAG: hacky-raccoon-docker-amd64
+  CI_RUNNER_TAG: hacky-raccoon-docker-amd64 
   DOCKER_IMAGE_ARCH: amd64              # Docker image architecture
   DOCKERFILES_DIR: .gci                 # Dockerfile directory
 
 stages:
   - build_image
+  - pages
 
 build-image-branch:
   extends: 
@@ -30,3 +31,30 @@ build-image-tag:
     - .tag
   variables:
     IMAGE: ${CI_REGISTRY_IMAGE}/${DOCKER_IMAGE_ARCH}/tag:${CI_COMMIT_REF_NAME}
+
+.pages:
+  stage: pages
+  script:
+    - sphinx-build -d _build/doctrees . _build/html
+    - mv _build/html public/
+  artifacts:
+    paths:
+    - public
+
+pages-branch:
+  image: ${CI_REGISTRY_IMAGE}/${DOCKER_IMAGE_ARCH}/${CI_COMMIT_REF_NAME}:${CI_COMMIT_SHORT_SHA}
+  extends:
+    - .pages
+    - .branch
+
+pages-latest:
+  image: ${CI_REGISTRY_IMAGE}/${DOCKER_IMAGE_ARCH}:latest
+  extends:
+    - .pages
+    - .latest
+
+pages-tag:
+  image: ${CI_REGISTRY_IMAGE}/${DOCKER_IMAGE_ARCH}/tag:${CI_COMMIT_REF_NAME}
+  extends:
+    - .pages
+    - .tag
