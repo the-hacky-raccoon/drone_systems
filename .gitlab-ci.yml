@@ -2,7 +2,7 @@
 # this is done in this way to test some things of hacky raccon ci templates repo
 include:
   - remote: '${HACKY_RACCOON_CI_BASE_PATH}/templates/.base_workflow.yml'
-  - remote: '${HACKY_RACCOON_CI_BASE_PATH}/.base_build_docker_img.yml'
+  - remote: '${HACKY_RACCOON_CI_BASE_PATH}/templates/.base_build_docker_img.yml'
 
 variables:
   BUILD_IMAGE_RUNNER_TAG: hacky-raccoon-docker-amd64
