@@ -1,5 +1,6 @@
+###################
 System overview
-====================================================
+###################
 
 Raccoon Drone is a quadrotor X. The system is divided in 3 big blocks:
 
@@ -19,5 +20,6 @@ Raccoon Drone is a quadrotor X. The system is divided in 3 big blocks:
    :align: center
    :width: 600
 
+*******
 Links
-------
+*******

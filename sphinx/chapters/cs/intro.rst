@@ -1,5 +1,6 @@
+**********************
 Communication System
-====================================================
+**********************
 
 The communication system has to communicate:
 
@@ -8,4 +9,4 @@ The communication system has to communicate:
 * The telemetry gathered from the rest of the system to the user.
 
 Links
-------
+########

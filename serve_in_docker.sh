@@ -35,6 +35,8 @@ else
 	exit -1
 fi
 
+rm -rf out/
+mkdir -p out/
 
 if [ "${REBUILD_IMAGE}" = "true" ]; then
 	log "erasing ${DOCKER_IMAGE_EXECUTED_LOCALLY}..."	
@@ -49,4 +51,4 @@ else
 fi
 
 docker run --rm -it --net=host -v $(pwd):/docs ${DOCKER_IMAGE_EXECUTED_LOCALLY} \
-	sh -c "sphinx-build -d _build/doctrees . _build/html && sphinx-serve"
+	sh -c "sphinx-build -d out/_build/doctrees . out/_build/html"
