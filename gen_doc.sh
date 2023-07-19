@@ -51,4 +51,4 @@ else
 fi
 
 docker run --rm -it --net=host -v $(pwd):/docs ${DOCKER_IMAGE_EXECUTED_LOCALLY} \
-	sh -c "sphinx-build -d out/_build/doctrees . out/_build/html"
+	sh -c "sphinx-build -d ../out/_build/doctrees . ../out/_build/html"

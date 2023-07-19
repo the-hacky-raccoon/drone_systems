@@ -8,5 +8,11 @@ The communication system has to communicate:
 
 * The telemetry gathered from the rest of the system to the user.
 
+.. toctree::
+    :maxdepth: 2
+    :caption: Contents:
+
+    titles/mqtt
+
 Links
 ########

@@ -29,12 +29,12 @@ Also, it is important to note that Lithium cell should not be charged too quickl
 Links
 #######
 
-* [Cubesat EPS introduction][http://www.ece3sat.com/cubesatmodules/eps/]
+* `Cubesat EPS introduction <http://www.ece3sat.com/cubesatmodules/eps/>`_
 
-* [DroneCAN][https://dronecan.github.io/]
+* `DroneCAN <https://dronecan.github.io/>`_
 
-* [AP_PERIPH CAN-L4-BM][http://www.mateksys.com/?portfolio=can-l4-bm#tab-id-2]
+* `AP_PERIPH CAN-L4-BM <http://www.mateksys.com/?portfolio=can-l4-bm#tab-id-2>`_
 
-* [Single cell voltage monitoring][https://bitdrivencircuits.com/Battery_Monitor/batteryMonitor_home.html]
+* `Single cell voltage monitoring <https://bitdrivencircuits.com/Battery_Monitor/batteryMonitor_home.html>`_
 
-* [Diseño de un sistema de gestión y almacenamiento de energía solar para nodos IOT][https://academica-e.unavarra.es/bitstream/handle/2454/45693/Diseno%20de%20un%20sistema%20de%20gestion%20y%20almacenamiento%20de%20energia%20para%20nodos%20IoT%20-%20Raul%20Arribas.pdf?sequence=1&isAllowed=y]
+* `Diseño de un sistema de gestión y almacenamiento de energía solar para nodos IOT <https://academica-e.unavarra.es/bitstream/handle/2454/45693/Diseno%20de%20un%20sistema%20de%20gestion%20y%20almacenamiento%20de%20energia%20para%20nodos%20IoT%20-%20Raul%20Arribas.pdf?sequence=1&isAllowed=y>`_

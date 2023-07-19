@@ -59,14 +59,6 @@ The EPS needs an electronics that can monitor the LiPo battery.
 The goal is to use an IC that can handle all the power management of the battery.
 Then the MCU can read useful information gathered by this IC and send it as telemetry to other parts of the system.
 
-BQ76925
-
-BQ25798
-=========
-
-BQ24170
-=========
-
 Comparative
 =============
 
@@ -92,16 +84,16 @@ Discarded ICs
 Links
 *******
 
-* [Drone batteries: The Complete Guide][https://www.remoteflyer.com/drone-batteries-the-complete-guide/]
+* `Drone batteries: The Complete Guide <https://www.remoteflyer.com/drone-batteries-the-complete-guide/>`_
 
-* [Using LiPo batteries for FPV Drones: A Beginner's Guide with Top Product Recommendations][https://oscarliang.com/lipo-battery-guide/]
+* `Using LiPo batteries for FPV Drones: A Beginner's Guide with Top Product Recommendations <https://oscarliang.com/lipo-battery-guide/>`_
 
-* [TPS65011 Datasheet][https://www.ti.com/lit/ds/symlink/tps65011.pdf?ts=1688730718863]
+* `TPS65011 Datasheet <https://www.ti.com/lit/ds/symlink/tps65011.pdf?ts=1688730718863>`_
 
-* [BQ25798 Datasheet][https://www.ti.com/lit/ds/symlink/bq25798.pdf?ts=1688740609247&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FBQ25798]
+* `BQ25798 Datasheet <https://www.ti.com/lit/ds/symlink/bq25798.pdf?ts=1688740609247&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FBQ25798>`_
 
-* [BQ76925 Datasheet][https://www.ti.com/lit/ds/symlink/bq76925.pdf]
+* `BQ76925 Datasheet <https://www.ti.com/lit/ds/symlink/bq76925.pdf>`_
 
-* [MCP73831/2 Datasheet][https://ww1.microchip.com/downloads/en/DeviceDoc/MCP73831-Family-Data-Sheet-DS20001984H.pdf]
+* `MCP73831/2 Datasheet <https://ww1.microchip.com/downloads/en/DeviceDoc/MCP73831-Family-Data-Sheet-DS20001984H.pdf>`_
 
-* [TP5100 Datasheet][https://voltiq.ru/datasheets/TP5100-datashhet.pdf]
+* `TP5100 Datasheet <https://voltiq.ru/datasheets/TP5100-datashhet.pdf>`_
