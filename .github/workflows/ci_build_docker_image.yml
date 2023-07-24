@@ -12,7 +12,7 @@ on: [push]
 jobs:
   build-branch:
     runs-on: ubuntu-latest
-    if: ${{ github.ref != 'ref/heads/master' }} && ${{ github.ref_type == branch }}
+    if: ${{ github.ref != 'ref/heads/master' }} && ${{ github.ref_type == 'branch' }}
     steps:
     - uses: actions/checkout@v3
     - name: Get short SHA
@@ -25,7 +25,7 @@ jobs:
 
   build-master:
     runs-on: ubuntu-latest
-    if: ${{ github.ref == 'ref/heads/master' }} && ${ github.ref_type == branch }}
+    if: ${{ github.ref == 'ref/heads/master' }} && ${ github.ref_type == 'branch' }}
     steps:
     - uses: actions/checkout@v3    
     - name: Publish to Registry in master
@@ -35,7 +35,7 @@ jobs:
       
   build-tag:
     runs-on: ubuntu-latest
-    if: ${ github.ref_type == tag }}
+    if: ${{ github.ref_type == 'tag' }}
     steps:
     - uses: actions/checkout@v3    
     - name: Publish to Registry in master
