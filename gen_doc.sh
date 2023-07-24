@@ -35,7 +35,6 @@ else
 	exit -1
 fi
 
-rm -rf out/
 mkdir -p out/
 
 if [ "${REBUILD_IMAGE}" = "true" ]; then
@@ -51,4 +50,4 @@ else
 fi
 
 docker run --rm -it --net=host -v $(pwd):/docs ${DOCKER_IMAGE_EXECUTED_LOCALLY} \
-	sh -c "sphinx-build -d ../out/_build/doctrees . ../out/_build/html"
+	sh -c "rm -rf ../out && sphinx-build -d ../out/_build/doctrees . ../out/_build/html"
