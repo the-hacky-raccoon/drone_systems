@@ -1,0 +1,46 @@
+name: Docker Image Build & Deploy Job
+
+env:
+  username: ${{ github.actor }}
+  password: ${{ secrets.DOCKER_PASSWORD }}  
+  registry: ghcr.io
+  dockerfile: .gci/Dockerfile
+  name: raccon_drone_systems
+
+on: [push]
+
+jobs:
+  build-branch:
+    runs-on: ubuntu-latest
+    if: ${{ github.ref != 'ref/heads/master' }} && ${{ github.ref_type == branch }}
+    steps:
+    - uses: actions/checkout@v3
+    - name: Get short SHA
+      id: vars
+      run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+    - name: Publish to Registry in master
+      uses: elgohr/Publish-Docker-Github-Action@v5
+      with:
+        tags: ${{ steps.vars.outputs.sha_short }} 
+
+  build-master:
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'ref/heads/master' }} && ${ github.ref_type == branch }}
+    steps:
+    - uses: actions/checkout@v3    
+    - name: Publish to Registry in master
+      uses: elgohr/Publish-Docker-Github-Action@v5
+      with:
+        tags: 'latest'
+      
+  build-tag:
+    runs-on: ubuntu-latest
+    if: ${ github.ref_type == tag }}
+    steps:
+    - uses: actions/checkout@v3    
+    - name: Publish to Registry in master
+      uses: elgohr/Publish-Docker-Github-Action@v5
+      with:
+        tags: ${{ github.ref_name }}
+
+        
